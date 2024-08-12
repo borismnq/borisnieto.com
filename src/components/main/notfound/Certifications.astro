@@ -1,0 +1,97 @@
+---
+import { certifications } from "../../../const/const";
+import { getIconComponent } from "../../../icons/IconAll.astro";
+
+---
+
+<section class="section_certifications">
+  <div class="linear-grandient-1"></div>
+  <div class="content_certifications">
+    <h3 class="title-certifications" id="certifications">Certificaciones</h3>
+    <!-- <div class="container-text"> -->
+     <br>
+     <div class="container-certifications">
+      {
+        certifications.map(({ url, description, icon }) => {
+          const IconComponent = getIconComponent(icon);
+          return (
+            <div class="certification-certifications">
+              <a href={url} class="flex-container">
+                {IconComponent && <IconComponent />}
+                <span>&nbsp;&nbsp;{description}</span>
+              </a>
+            </div>
+            // <br>
+          );
+        })
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .flex-container{
+    display: flex;
+    align-items: center;
+  }
+  .section_certifications {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: #111111;
+    justify-content: center;
+    align-items: center;
+  }
+  .linear-grandient-1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #000, rgba(1, 70, 190, 0.5));
+    z-index: 0;
+  }
+  .content_certifications {
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+    max-width: 1355px;
+  }
+  .title-certifications {
+    font-size: 27px;
+    color: #f6f6f9;
+    text-align: left;
+    width: 100%;
+    font-weight: 800;
+    scroll-margin-top: 80px;
+    padding: 20px 0;
+  }
+  @media (max-width: 640px) {
+    .p-certifications {
+      width: 100%;
+    }
+  }
+  .container-certifications{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .certification-certifications{
+    width: 50%;
+    /* text-align: left; */
+    color: white;
+    font-style: normal;
+    margin-bottom: 12px;
+  }
+  
+</style>
