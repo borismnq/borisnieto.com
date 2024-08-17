@@ -15,10 +15,10 @@ import { getIconComponent } from "../../../icons/IconAll.astro";
         certifications.map(({ url, description, icon }) => {
           const IconComponent = getIconComponent(icon);
           return (
-            <div class="certification-certifications">
+            <div class="certification-certifications flex-container">
               <a href={url} class="flex-container">
                 {IconComponent && <IconComponent />}
-                <span>&nbsp;&nbsp;{description}</span>
+                &nbsp;&nbsp;{description}
               </a>
             </div>
             // <br>

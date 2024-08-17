@@ -10,7 +10,7 @@ import Project from "./Project.astro";
     <div>
       <ul class="ul-projects">
         {
-          projects.map(({ description, img, link, technologies, title }) => (
+          projects.map(({ description, img, link, title, technologies}) => (
             <Project
               img={img}
               description={description}

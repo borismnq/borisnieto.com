@@ -20,39 +20,25 @@ import photoperfil from "../../../../public/img/profile-photo.webp";
       <h2 class="text-name">BORIS NIETO</h2>
       <div class="container-profession">
         <div>
-          <span class="p-profession">D</span>
-          <span class="p-profession">e</span>
-          <span class="p-profession">s</span>
-          <span class="p-profession">a</span>
-          <span class="p-profession">r</span>
-          <span class="p-profession">r</span>
-          <span class="p-profession">o</span>
-          <span class="p-profession">l</span>
-          <span class="p-profession">l</span>
-          <span class="p-profession">a</span>
-          <span class="p-profession">d</span>
-          <span class="p-profession">o</span>
-          <span class="p-profession">r</span>
+          <span class="p-profession">DESARROLLADOR</span>
           <span class="">&nbsp;</span>
-        </div>
-        <div>
-          <span class="p-profession">B</span>
-          <span class="p-profession">a</span>
-          <span class="p-profession">c</span>
-          <span class="p-profession">k</span>
-          <span class="p-profession">-</span>
-          <span class="p-profession">e</span>
-          <span class="p-profession">n</span>
-          <span class="p-profession">d</span>
+          <br>
+          <span class="p-profession"> DE</span>
+          <span class="p-profession">SOFTWARE</span>
           <span class="">&nbsp;</span>
+          <div class="tooltip">
+            <img srcset="https://img.icons8.com/?size=48&amp;id=20761&amp;format=png 1x" width="24" height="24" alt="Tooltip icon" style="" data-v-e5a91372="">
+            <span class="tooltiptext">Los desarrolladores de software diseñan, programan, construyen, implementan y mantienen software utilizando muchas habilidades y herramientas diferentes.</span>
+          </div>
         </div>
       </div>
+      
       <p class="p-presentation">
-        Desarrollador de Software Senior con más de 5 años de experiencia utilizando Python como lenguaje principal.
+        Experto Desarrollador de Software Senior con más de 5 años de experiencia utilizando Python como lenguaje principal.
         Actualmente trabajando con frameworks como <b>Flask</b>, <b>FastAPI</b>, <b>Django</b>.
         usando bases de datos como <b>PostgreSQL</b>, <b>Firebase</b>, <b>Neo4j</b>
         herramientas como <b>Docker</b> para crear e implementar aplicaciones en un entorno de nube como <b>AWS</b> o <b>GCP</b>.
-        Me siento muy cómodo siguiendo patrones de diseño como <b>SÓLIDO</b> y <b>Arquitectura limpia</b>.
+        Soy capaz de seguir patrones de diseño como <b>SOLID</b> y <b>Clean Architecture</b>.
       </p>
       <div class="container-curriculum">
         <a href="mailto:borismnq@gmail.com" target="_blank" class="a-action"
@@ -61,11 +47,11 @@ import photoperfil from "../../../../public/img/profile-photo.webp";
         <a
           href="https://drive.google.com/uc?export=download&id=1K1DVCtOMXcqs3U_gNwHuCamdkGIPK9IX"
           class="a-curriculum"
-          target="_blank">Descargar Currículum</a
+          target="_blank">Descarga mi Currículum</a
         >
       </div>
       <div class="container-social">
-        <p class="">Echa un vistaso a mi</p>
+        <p class="">Echa un vistazo a mi</p>
         <a href="https://github.com/borismnq" target="_blank">
           <li class="li-social">
             <i class="fa-brands fa-github"></i>
@@ -102,6 +88,43 @@ import photoperfil from "../../../../public/img/profile-photo.webp";
 </script>
 
 <style>
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+    
+    
+  }
+    /* pointer-events: none;
+    user-select: none;
+    padding: .5rem 1rem;
+    font-size: .8rem;
+    border-radius: 8px;
+    top: 10%;
+    opacity:0;
+  } */
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 170px;
+    background-color: #1c19f4;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+  
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+    /* box-shadow: 0 0 10px white;
+    padding: .5rem 1rem;
+    border-radius: 8px; */
+  }
+
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
   .content-presentation {
     position: relative;
     width: 100%;
@@ -164,7 +187,7 @@ import photoperfil from "../../../../public/img/profile-photo.webp";
     margin-top: 30px;
   }
   .container-profession {
-    cursor: pointer;
+    cursor: normal;
     padding: 5px 0;
   }
   .p-profession {
@@ -247,7 +270,7 @@ import photoperfil from "../../../../public/img/profile-photo.webp";
   }
 
   .a-curriculum:hover {
-    background-color: rgba(1, 190, 150, 0.3);
+    background-color: rgba(1, 70, 190, 0.5);
     transform: translateX(4px);
   }
 

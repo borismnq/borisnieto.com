@@ -62,6 +62,12 @@ export const IconKeys = {
   travisci: "travisci",
   mysql: "mysql",
   // here add more icon keys
+  pythonmini: "pythonmini",
+  fastapimini: "fastapimini",
+  djangomini: "djangomini",
+  seleniummini: "seleniummini",
+  awsmini: "awsmini",
+  gcpmini: "gcpmini",
 };
 
 
@@ -280,72 +286,72 @@ export const certifications = [
   {
     url: "https://platzi.com/p/borismnq/curso/1098-ingenieria/diploma/detalle/",
     description: "Fundamentos de Ingeniería de Software",
-    icon: IconKeys.python,
+    icon: IconKeys.pythonmini,
   },
   {
     url: "https://platzi.com/p/borismnq/learning-path/8422-cloud-digital-leader/diploma/detalle/",
     description: "Certificación Cloud Digital Leader",
-    icon: IconKeys.gcp,
+    icon: IconKeys.gcpmini,
   },
   {
     url: "https://platzi.com/p/borismnq/curso/2469-fundamentos-google/diploma/detalle/",
     description: "Curso de Introducción a Google Cloud Platform",
-    icon: IconKeys.gcp,
+    icon: IconKeys.gcpmini,
   },
   {
     url: "https://www.udemy.com/certificate/UC-6f83275e-b731-4fd2-8231-11995df9d4e7/",
     description: "Curso maestro de Web Scraping: Extracción de Datos de la Web",
-    icon: IconKeys.selenium,
+    icon: IconKeys.seleniummini,
   },
   {
     url: "https://www.udemy.com/certificate/UC-d6e6a502-42c2-4ce0-b276-133b69bcaa22/",
     description: "Backend REST API with Python & Django - Advanced ",
-    icon: IconKeys.django,
+    icon: IconKeys.djangomini,
   },
   {
     url: "https://certificate.givemycertificate.com/c/c2f0e899-3e19-4c81-bd2b-321f8f3c68f4",
     description: "PyGeekle 22",
-    icon: IconKeys.python,
+    icon: IconKeys.pythonmini,
   },
   {
     url: "https://platzi.com/p/borismnq/curso/1937-python/diploma/detalle/",
     description: "Curso Básico de Python",
-    icon: IconKeys.python,
+    icon: IconKeys.pythonmini,
   },
   {
     url: "https://platzi.com/p/borismnq/curso/2255-python-intermedio/diploma/detalle/",
     description: "Curso de Python Intermedio: Comprehensions, Lambdas y Manejo de Errores",
-    icon: IconKeys.python,
+    icon: IconKeys.pythonmini,
   },
   {
     url: "https://platzi.com/p/borismnq/curso/1775-algoritmos-python/diploma/detalle/",
     description: "Curso de Complejidad Algorítmica con Python",
-    icon: IconKeys.python,
+    icon: IconKeys.pythonmini,
   },
   {
     url: "https://platzi.com/p/borismnq/curso/2514-fastapi-errores/diploma/detalle/",
     description: "Curso de FastAPI: Modularización, Datos y Errores",
-    icon: IconKeys.fastapi,
+    icon: IconKeys.fastapimini,
   },
   {
     url: "https://platzi.com/p/borismnq/curso/2513-fundamentos-fastapi/diploma/detalle/",
     description: "Curso de FastAPI: Fundamentos, Path Operations y Validaciones",
-    icon: IconKeys.fastapi,
+    icon: IconKeys.fastapimini,
   },
   {
     url: "https://platzi.com/p/borismnq/curso/2694-django/diploma/detalle/",
     description: "Curso Básico de Django",
-    icon: IconKeys.django,
+    icon: IconKeys.djangomini,
   },
   {
     url: "https://platzi.com/p/borismnq/curso/2728-django-intermedio/diploma/detalle/",
     description: "Curso de Django Intermedio: Testing, Static Files, Django Admin",
-    icon: IconKeys.django,
+    icon: IconKeys.djangomini,
   },
   {
     url: "https://platzi.com/p/borismnq/curso/8031-intro-nube/diploma/detalle/",
     description: "Curso de Introducción a la Nube",
-    icon: IconKeys.aws,
+    icon: IconKeys.awsmini,
   },
   
 ]
