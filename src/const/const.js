@@ -237,7 +237,7 @@ export const projects = [
   },
   {
     img: "../../../img/rabbitmq.webp",
-    title: "Consumer dockerizado básico de RabbitMQ en architecture de microservicio",
+    title: "Consumer dockerizado básico de RabbitMQ en arquitectura de microservicio",
     link: "https://github.com/borismnq/python-microservice-rabbitmq",
     description: `Boilerplate de un consumidor como microservicio siguiendo los patrones de RabbitMQ`,
     technologies: [
