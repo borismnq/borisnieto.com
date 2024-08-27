@@ -1,3 +1,4 @@
+
 <header class="header">
   <h1 id="inicio">Portafolio</h1>
   <nav class="nav">
@@ -20,7 +21,13 @@
       <a href="#references">
         <li class="li-nav">Referencias</li>
       </a>
-      
+      &nbsp;
+      <!-- <button class="language-switcher uk visible" title="Cambiar a Inglés" aria-live="polite">
+        <img aria-hidden="true" src="../../public/img/uk-flag.svg" alt="Switch to Spanish" height="24" width="24">
+      </button>
+      <button class="language-switcher spain hidden" title="Switch to spanish" aria-live="polite">
+        <img aria-hidden="true" src="../../public/img/spain-flag.svg" alt="Switch to Spanish" height="24" width="24">
+      </button> -->
     </ul>
   </nav>
   <!-- <div class="container-bnt-menu">
@@ -34,31 +41,55 @@
   <div class="menu-drop"></div> -->
 
   <script>
-    // const $menu = document.querySelector(".nav");
-    // const $menuDrop = document.querySelector(".menu-drop");
-    // const $btnmenu = document.querySelector(".btn-menu");
-    // const $linea1 = document.querySelector("#linea1");
-    // const $linea2 = document.querySelector("#linea2");
-    // const $linea3 = document.querySelector("#linea3");
-    // $btnmenu.addEventListener("click", () => {
-    //   $linea1.classList.toggle("activelinea1__bars-menu");
-    //   $linea2.classList.toggle("activelinea2__bars-menu");
-    //   $linea3.classList.toggle("activelinea3__bars-menu");
-    //   $menu.classList.toggle("menu-activado");
-    //   $menuDrop.classList.toggle("activa-menu-drop");
-    // });
-
-    // $menuDrop.addEventListener("click", () => {
-    //   $linea1.classList.toggle("activelinea1__bars-menu");
-    //   $linea2.classList.toggle("activelinea2__bars-menu");
-    //   $linea3.classList.toggle("activelinea3__bars-menu");
-    //   $menu.classList.toggle("menu-activado");
-    //   $menuDrop.classList.toggle("activa-menu-drop");
-    // });
+    var $visible_switcher = document.querySelector(".language-switcher.visible");
+    var $hidden_switcher = document.querySelector(".language-switcher.hidden");
+    if ($visible_switcher)
+      $visible_switcher.addEventListener("click", () => {
+        var not_hidden_switcher = document.querySelector(".language-switcher.visible");
+        var hidden_switcher = document.querySelector(".language-switcher.hidden");
+        if (not_hidden_switcher){
+          not_hidden_switcher.classList.remove('visible');
+          not_hidden_switcher.classList.add('hidden');
+          
+        }
+        if (hidden_switcher){
+          hidden_switcher.classList.remove('hidden');
+          hidden_switcher.classList.add('visible');
+        }
+      });
+    if ($hidden_switcher)
+      $hidden_switcher.addEventListener("click", () => {
+        var not_hidden_switcher = document.querySelector(".language-switcher.visible");
+        var hidden_switcher = document.querySelector(".language-switcher.hidden");
+        if (not_hidden_switcher){
+          not_hidden_switcher.classList.remove('visible');
+          not_hidden_switcher.classList.add('hidden');
+        }
+        if (hidden_switcher){
+          hidden_switcher.classList.remove('hidden');
+          hidden_switcher.classList.add('visible');
+        }
+    });
   </script>
 </header>
 
 <style is:global>
+  .language-switcher{
+    background-color: inherit;
+    border:none;
+    cursor:pointer;
+  }
+  /* .spain{
+    background-color: inherit;
+    border:none;
+    cursor:pointer;
+  } */
+  .hidden{
+    display:none;
+  }
+  /* .visible {
+    display: block;
+  } */
   .header {
     position: relative;
     height: 80px;

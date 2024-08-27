@@ -13,8 +13,30 @@ import photoperfil from "../../../../public/img/profile-photo.webp";
           {/* If you are not using vercel, place a normal <img> tag */}
           <Image src={photoperfil} alt="Boris Nieto" id="inicio" />
         </picture>
+        
+      </div>
+      <div id="time-wrapper">
+        <!-- <h2>The World Clock</h2> -->
+        <div id="time-holder">
+          <div>
+            <div class="centeredtime">
+              <i class="fa fa-map-marker" style="font-size:24px"></i>
+              &nbsp;
+              <span>Perú 🇵🇪 </span>
+            </div>
+            <div class="centeredtime">
+              <i class="fa fa-clock-o" style="font-size:19px"></i>
+              &nbsp;
+              <span id="clock"></span>
+              &nbsp;
+              (GMT-5)
+            </div>
+            
+          </div>
+        </div>
       </div>
     </div>
+    
     <div class="container-text">
       <!-- <h2 class="text-hello">Hola <strong>soy</strong></h2> -->
       <h2 class="text-name">BORIS NIETO</h2>
@@ -41,8 +63,8 @@ import photoperfil from "../../../../public/img/profile-photo.webp";
         Soy capaz de seguir patrones de diseño como <b>SOLID</b> y <b>Clean Architecture</b>.
       </p>
       <div class="container-curriculum">
-        <a href="mailto:borismnq@gmail.com" target="_blank" class="a-action"
-          >Escríbeme</a
+        <a href="mailto:borismnq@gmail.com" target="_blank" class="a-action label"
+          ></a
         >
         <a
           href="https://drive.google.com/uc?export=download&id=1K1DVCtOMXcqs3U_gNwHuCamdkGIPK9IX"
@@ -78,7 +100,20 @@ import photoperfil from "../../../../public/img/profile-photo.webp";
       toogle(letter);
     });
   });
-
+  function updateClock() {
+      // const estTime = new Date().toLocaleString('nl-NL', {timeZone: 'America/Lima'});
+      const clock = new Date().toLocaleTimeString("en-GB", {hour: '2-digit', minute:'2-digit', second:'2-digit'});
+      // const estTime = new Date().toLocaleString('nl-NL', {timeZone: 'America/New_York'});
+      // document.querySelectorAll("#gmt").innerHTML = gmtTime;
+      // document.querySelectorAll("#cet").innerHTML = cetTime;
+      // document.querySelectorAll("#est").innerHTML = estTime;
+      var clock_element = document.getElementById('clock')
+      if (clock_element){
+        clock_element.innerHTML = clock;
+      }
+  }
+  updateClock()
+  setInterval(updateClock, 1000);
   function toogle(letter:any) {
     letter.classList.add("bouncing");
     letter.addEventListener("animationend", () => {
@@ -88,6 +123,36 @@ import photoperfil from "../../../../public/img/profile-photo.webp";
 </script>
 
 <style>
+  .centeredtime{
+    display: flex;
+    align-items: center;
+    /* position: relative; */
+
+    justify-content: center;
+  }
+  #time-wrapper {
+    /* border: 1px solid #1c19f4; */
+    position: absolute;
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+    height: 80px;
+    bottom: 24%;
+    color: white;
+    -webkit-backdrop-filter: blur(2px);
+    margin-left: 100px;
+    backdrop-filter: blur(2px);
+    width: 50%;
+    justify-content: center;
+  }
+  
+  #time-holder {
+    margin-top: 10px;
+  }
+
+  #time-holder div {
+    margin-bottom: 8px;
+  }
   .tooltip {
     position: relative;
     display: inline-block;
@@ -244,7 +309,23 @@ import photoperfil from "../../../../public/img/profile-photo.webp";
   .a-action:hover {
     transform: translateX(4px);
   }
+  .label:after{
+      content:'Escríbeme';
+  }
+  .label:hover:after{
+      content:'borismnq@gmail.com';
+  }
+  /* .button:hover span {
+    display:none
+  }
 
+  .button:hover:before {
+    content:"Completed!";
+  }
+
+  .button:hover {
+    background-color: green;
+  } */
   .a-curriculum {
     position: relative;
     display: flex;
