@@ -103,10 +103,6 @@ import photoperfil from "../../../../public/img/profile-photo.webp";
   function updateClock() {
       // const estTime = new Date().toLocaleString('nl-NL', {timeZone: 'America/Lima'});
       const clock = new Date().toLocaleTimeString("en-GB", {hour: '2-digit', minute:'2-digit', second:'2-digit'});
-      // const estTime = new Date().toLocaleString('nl-NL', {timeZone: 'America/New_York'});
-      // document.querySelectorAll("#gmt").innerHTML = gmtTime;
-      // document.querySelectorAll("#cet").innerHTML = cetTime;
-      // document.querySelectorAll("#est").innerHTML = estTime;
       var clock_element = document.getElementById('clock')
       if (clock_element){
         clock_element.innerHTML = clock;
