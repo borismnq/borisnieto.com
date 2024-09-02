@@ -4,8 +4,8 @@ import { defineConfig } from "astro/config";
 // If you want to remove vercel from your project you can do npm uninstall vercel
 
 export default defineConfig({
-    site: 'https://borismnq.github.io',
-    base: '/borisnieto.com'
+    site: 'https://borisnieto.com',
+    // base: '/borisnieto.com'
 })
 //If you don't have vercel the configuration will be empty
 
